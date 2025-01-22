@@ -43,4 +43,36 @@ dropdownMenu.addEventListener('mouseleave', () => {
     dropdownMenu.classList.remove('show'); // Remove the "show" class
 
 });
+const player1button = document.querySelector('.player1button');
+const player2button = document.querySelector('.player2button');
+const resetbutton = document.querySelector('.reset');
+const player1 = document.querySelector('.player1');
+const player2 = document.querySelector('.player2');
 
+//applying eventListener at player1button;
+let score1 = 0;
+let score2 = 0;
+player1button.addEventListener('click', function () {
+    score1++;
+    player1.textContent = score1;
+
+});
+
+player2button.addEventListener('click', function () {
+    score2++;
+    player2.textContent = score2;
+
+});
+
+resetbutton.addEventListener('click', function () {
+    player1.textContent = 0;
+    player2.textContent = 0;
+})
+
+const li = document.querySelectorAll('LI');
+li.forEach((item) => {
+    item.addEventListener('click', function (evt) {
+        console.log(evt);
+    })
+
+});
