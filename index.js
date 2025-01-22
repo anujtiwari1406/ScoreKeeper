@@ -52,27 +52,49 @@ const player2 = document.querySelector('.player2');
 //applying eventListener at player1button;
 let score1 = 0;
 let score2 = 0;
+let playedUpto = 0;
 player1button.addEventListener('click', function () {
     score1++;
     player1.textContent = score1;
+    // checking if player1 reched the end of score;
+    if (playedUpto == score1) {
+        player1.style.color = 'green';
+        player2.style.color = 'Red';
+    }
+
 
 });
 
 player2button.addEventListener('click', function () {
     score2++;
     player2.textContent = score2;
+    // check if player 2 have reched the end of score;
+    if (playedUpto == score2) {
+        player2.style.color = 'green';
+        player1.style.color = 'Red';
+    }
 
 });
 
 resetbutton.addEventListener('click', function () {
-    player1.textContent = 0;
-    player2.textContent = 0;
+    score1 = 0;
+    score2 = 0;
+    player1.textContent = score1;
+    player2.textContent = score2;
+    player2.style.color = 'Black';
+    player1.style.color = 'Black';
+
 })
 
-const li = document.querySelectorAll('LI');
-li.forEach((item) => {
+const A = document.querySelectorAll('a');
+A.forEach((item) => {
     item.addEventListener('click', function (evt) {
-        console.log(evt);
+        dropdownMenu.classList.remove('show');
+        playedUpto = parseInt(event.target.innerHTML.trim());
+
+
     })
 
 });
+
+
