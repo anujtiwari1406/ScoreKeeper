@@ -1,0 +1,182 @@
+html,
+body {
+    margin: 0;
+    height: 100%;
+}
+
+.container {
+    width: 100%;
+    height: 100vh;
+    background-image: url(images/3.jpeg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: aqua;
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+
+}
+
+.content {
+    width: 600px;
+    height: 515px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+}
+
+.banner {
+    width: 600px;
+    height: 300px;
+    background-image: url(images/banner.jpeg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+
+/* dropdown css*/
+
+.dropdown {
+    position: relative;
+    display: flex;
+
+    align-items: flex-start;
+    justify-content: flex-start;
+    width: 100%;
+    z-index: 1;
+
+
+
+}
+
+.dropdown-label {
+    font-size: 25px;
+
+    margin-right: 0px;
+    background-color: white;
+    color: black;
+    padding: 10px 0px;
+    border: none;
+
+
+}
+
+/* Dropdown Button */
+.dropdown-button {
+    background-color: white;
+    color: black;
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+    margin-top: 8px;
+}
+
+/* Dropdown Menu */
+.dropdown-menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    position: absolute;
+    top: 100%;
+    left: 170px;
+    display: none;
+    /* Hidden by default */
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 50px;
+    z-index: 1000;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 2s ease-in-out;
+    overflow: visible;
+}
+
+/* Dropdown Menu Items */
+.dropdown-menu li {
+    border-bottom: 1px solid #eee;
+    z-index: 1000;
+
+}
+
+.dropdown-menu li:last-child {
+    border-bottom: none;
+}
+
+.dropdown-menu li a {
+    display: block;
+    padding: 5px 5px;
+    text-decoration: none;
+    color: #333;
+    font-size: 14px;
+}
+
+.dropdown-menu li a:hover {
+    background-color: #f0f0f0;
+    color: #3498db;
+}
+
+.dropdown-menu.show {
+    display: block;
+    /* Make it visible */
+    opacity: 1;
+    /* Fully visible */
+    pointer-events: all;
+    /* Allow interaction */
+}
+
+.score {
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    width: 100%;
+
+    background-color: white;
+    color: black;
+    padding: 0px 0px;
+    border: none;
+
+
+    margin-left: px;
+    margin-bottom: 0px;
+}
+
+.para {
+    font-size: 20px;
+    color: blueviolet;
+    margin-top: opx;
+
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    width: 100%;
+    cursor: text;
+
+}
+
+.button {
+    display: flex;
+
+    width: 100%;
+    flex-direction: row;
+
+}
+
+.active {
+    flex: 1;
+    /* Make each item take equal width */
+    text-align: center;
+    /* Center the text within each item */
+    padding: 10px;
+    background-color: lightblue;
+    border-radius: 10px;
+}
